@@ -171,6 +171,60 @@ const descuento = (number, percent) => {
 
 descuento(1000,20);
 
+// 17) Create an array with 100 positions filled with the false boolean
+
+const d = Array(100).fill(false)
+console.log(d)
+
+// 18) Find the index of an element (fresa) inside the Object
+
+const frutas = [
+    { nombre: 'naranja', color: 'naranja' }, // 0
+    { nombre: 'limon', color: 'amarillo' }, // 1
+    { nombre: 'fresa', color: 'rojo' }, // 2
+  ];
+  
+  const indice = frutas.findIndex((elemento, indice) => {
+    if (elemento.nombre === 'fresa') {
+      return true;
+    }
+  });
+  
+  console.log(indice); // index 2
+
+// 19) Adding new elements to an array
+
+var array = ['a','b','c'] // a, b, c
+
+const elements = (array) => {
+    array.pop() 
+    console.log(array)// a, b (-)
+    array.push('d')
+    console.log(array) //a, b, (d)
+    array.shift()
+    console.log(array) // (-) b, c
+    array.unshift('z')
+    console.log(array) // (z), a, b, c
+}
+
+elements(array)
+
+// 20) Methods in objects:
+
+const  persona = {
+    nombre: 'Soraya',
+    edad: 25,
+    hobbie: 'comer',
+    saludar(){
+      console.log(`Hola `)
+    },
+    presentarse(){
+      console.log(`Mi nombre es ${this.nombre}`)
+    }
+  }
+  
+persona.presentarse() // "Mi nombre es Soraya"
+
 // 21) Program a function that returns an array of numbers given a numeric array, e.g. my_function([1, 4, 5]) will return [1, 16, 25].
 
 const elevados = (number) => {
@@ -217,4 +271,5 @@ arrToObject([7, 5,7,8,6])
 
 
 //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
 
