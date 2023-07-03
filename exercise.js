@@ -63,7 +63,7 @@ const worldRepeated = ( text, world ) => {
     return console.log(`The world: ${world} is repeated ${counter} times`);
 }
 
-worldRepeated('Hello world, bye world', 'world')
+worldRepeated('Hello world, bye world', 'world');
 
 //7) Program a function that checks if a given word or phrase is a palindrome (which reads the same in one sense as in another), eg. myfunction("Rooms") will return true.
 
@@ -75,7 +75,7 @@ const palindrome = (world) => {
     return (world === reverse ? true : false)
 }
 
-console.log('rooms') //true
+console.log('rooms'); //true
 
 //8)Write a function that removes a certain pattern of characters from a given text, eg. myFunction("xyz1, xyz2, xyz3, xyz4 and xyz5", "xyz") will return "1, 2, 3, 4 and 5.
 
@@ -99,7 +99,7 @@ const numberPalindrome = (number = 0) => {
     return ((number) === isPalindrome) ? console.log(true): console.log(false)
 }
 
-numberPalindrome('2002')
+numberPalindrome('2002');
 
 //11) Program a function that calculates the factorial of a number (The factorial of a positive integer n, is defined as the product of all positive integers from 1 to n), eg. myFunction(5) will return 120.
 
@@ -112,7 +112,7 @@ const factorial = (number) => {
     return factorial;
 }
 
-console.log(factorial(5))
+console.log(factorial(5));
 
 //12) Program a function that determines if a number is prime (the one that is only divisible by itself and 1) or not, eg. myFunction(7) will return true.
 
@@ -128,7 +128,7 @@ const primeNumber = (number = undefined) => {
     return (divisible) ? console.log('Is not prime') : console.log('Is prime');
 }
 
-primeNumber(13)
+primeNumber(13);
 
 //13) Program a function that determines if a number is even or odd, eg. myFunction(29) will return Odd.
 
@@ -144,4 +144,77 @@ const degrees = (number) => {
     console.log(( number * 9 / 5) + 32)
 }
 
-degrees(0, + 'º') //32
+degrees(0, + 'º'); //32
+
+//15) Program a function to convert binary base number to decimal and vice versa. For example, myFunction(100,2) will return 4 base 10.
+
+const binaryToDecinal = (number, type) => {
+    if(typeof number !== "number") return console.log('Is not a number')
+
+    if( type === 2 ){
+        return console.log(`Number ${number} type ${type} = ${parseInt(number, type)} base 10`)
+    }
+}
+
+binaryToDecinal(100,2);
+
+//16) Program a function that returns the final amount after applying a discount to a given amount, miFunction(1000, 2) will return 800
+
+const descuento = (number, percent) => {
+
+    const total = percent*number/100;
+
+    const finalResult = number - total ;
+
+    console.log(`${finalResult}`)
+}
+
+descuento(1000,20);
+
+// 21) Program a function that returns an array of numbers given a numeric array, e.g. my_function([1, 4, 5]) will return [1, 16, 25].
+
+const elevados = (number) => {
+    
+    const newNumber = number.map(e => e * e);
+    return console.log(`Arreglo original ${number}. Arreglo elevado al cuadrado: ${newNumber}`)
+}
+
+elevados([1, 4, 5])
+
+// 22) Program a function that given an array returns the highest and lowest number in the array, e.g. myFunction([1, 4, 5, 99, -60]) will return [99, -60].
+
+const minMax = (number) => {
+    return console.log(`Array original: ${number}. The highest number is ${Math.max(...number)} and the lower is ${Math.min(...number)} `)
+}
+
+minMax([1, 4, 5, 99, -60])
+
+// 23) Program a function that given an array of numbers returns an object with 2 arrays in the first one it stores the even numbers and in the second one the odd numbers, e.g. myFunction([1,2,3,4,5,6,7,8,9,0]) will return {even: [2,4,6,8,0], odd: [1,3,5,7,9]}.
+
+const separateOddEven = (number) => {
+    return console.log({
+        even: number.filter(num => num % 2 === 0),
+        odd : number.filter(num => num % 2 === 1)
+    })
+}
+
+separateOddEven([1,2,3,4,5,6,7,8,9,0])
+
+//24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+
+const arrToObject = (number) => {
+    return console.log({
+        number,
+        asc: number.map(num => num).sort(),
+        desc: number.map(num => num).sort().reverse()
+    })
+}
+
+arrToObject([7, 5,7,8,6])
+
+//25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+
+
+
+//26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
