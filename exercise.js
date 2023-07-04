@@ -278,3 +278,20 @@ console.log(newArrWithoutDuplicates);
 //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
 
+/* 27) Given an unordered array of integers named number returns the smallest positive missing integer.*/
+
+ nums = [-3,-7,8,9,-5,1,2,3,5,6]
+
+ function smallestMissingPositive(nums){
+
+ if(nums.length === 0) return 1
+
+ const onlyPositives = nums.filter(num => num > 0);
+
+ const set = new Set(onlyPositives)
+
+ for(let i = 1; i <= set.size +1; i++){ if (!  set.has(i)) return console.log( i )}
+
+ }
+
+ smallestMissingPositive(nums)
