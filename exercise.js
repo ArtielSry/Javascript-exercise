@@ -283,7 +283,6 @@ console.log(newArrWithoutDuplicates);
  nums = [-3,-7,8,9,-5,1,2,3,5,6]
 
  function smallestMissingPositive(nums){
-
  if(nums.length === 0) return 1
 
  const onlyPositives = nums.filter(num => num > 0);
@@ -291,7 +290,6 @@ console.log(newArrWithoutDuplicates);
  const set = new Set(onlyPositives)
 
  for(let i = 1; i <= set.size +1; i++){ if (!  set.has(i)) return console.log( i )}
-
  }
 
  smallestMissingPositive(nums)
