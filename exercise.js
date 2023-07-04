@@ -277,6 +277,14 @@ console.log(newArrWithoutDuplicates);
 
 //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
+let values = [9,8,7,6,5,4,3,2,1,0];
+
+let sum = values.reduce((previous, current) => current += previous);
+
+let avg = sum / values.length;
+
+console.log(avg)
+
 
 /* 27) Given an unordered array of integers named number returns the smallest positive missing integer.*/
 
