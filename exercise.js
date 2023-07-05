@@ -358,6 +358,39 @@ function fizzbuzz(max){
 fizzbuzz(100) 
 
 // 31) Find out if there is any number in the array and in what position it is.
-const arr = ['a','b', 10,'c','c'];
+
+const anyNumberAndPosition = ['a','b', 10,'c','c'];
 console.log(arr.some(n => typeof n === 'number'))
 console.log(arr.findIndex(n => typeof n === 'number'))
+
+// 32) Iterate an object and display its content:
+
+const home = {
+  location: 'Spain',
+  street: 'Plaza Libertad',
+  price: 170.000,
+  rooms: 7
+}
+
+Object.entries(home).forEach( ([key,value]) => {
+  console.log(`${key.toUpperCase()}: ${value}`);
+})
+
+/*  
+    "LOCATION: Spain"
+    "STREET: Plaza Libertad"
+    "PRICE: 170"
+    "ROOMS: 7"
+*/
+
+// 33) Remove specific data from an array
+
+const films = [ 
+  {pelicula: 'La vida es Bella', year: 1997},
+  {pelicula: 'Zombieland', year: 2012},
+  {pelicula: 'Volver', year: 1965}]
+
+arr.splice(1,1) // in position 1 = Zombieland, 2012
+//toSpliced sirve para lo mismo pero creando un nuevo array en vez de modificando el existente
+console.log(arr) //   {pelicula: 'La vida es Bella', year: 1997}, {pelicula: 'Volver', year: 1965}
+
