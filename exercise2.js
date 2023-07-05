@@ -68,3 +68,17 @@ Animal.prototype.hello = function(){
 const snoopy = new Animal('Snoopy','Macho');
          
 snoopy.hello() // I am Snoopy
+
+
+3) Fibonacci 
+
+function fibonacci(num){
+const fib = [ 0, 1 ]
+
+  for(let i = 2; 2 <= num; i++) {
+  fib[i] = fib[i - 1] + fib[i - 2]
+}
+   return console.log(fib[num]);
+}
+
+fibonacci(10)
