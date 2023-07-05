@@ -101,6 +101,8 @@ numberPalindrome('2002');
 
 //11) Program a function that calculates the factorial of a number (The factorial of a positive integer n, is defined as the product of all positive integers from 1 to n), eg. myFunction(5) will return 120.
 
+// 5! = 1 * 2 * 3 * 4 * 5 = 120
+
 const factorial = (number) => {
     let factorial = 1;
 
@@ -110,7 +112,7 @@ const factorial = (number) => {
     return factorial;
 }
 
-console.log(factorial(5));
+console.log(factorial(5)); // 120
 
 //12) Program a function that determines if a number is prime (the one that is only divisible by itself and 1) or not, eg. myFunction(7) will return true.
 
