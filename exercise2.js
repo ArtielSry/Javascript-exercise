@@ -70,7 +70,7 @@ const snoopy = new Animal('Snoopy','Macho');
 snoopy.hello() // I am Snoopy
 
 
-3) Fibonacci 
+// 3) Fibonacci 
 
 function fibonacci(num){
 const fib = [ 0, 1 ]
