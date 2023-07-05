@@ -53,7 +53,7 @@ console.log(arr3) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  */
 
 
-// funcion constructora: la forma correcta es escribir los metodos fuera de esta.
+// funcion constructora: la forma correcta es escribir los metodos fuera de esta, porque si no se van a repetir una y otra vez, realice la funcion o no.
 function Animal (name, type){
     //atributos
     this.name = name;
