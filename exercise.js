@@ -69,13 +69,11 @@ worldRepeated('Hello world, bye world', 'world');
 
 const palindrome = (world) => {
     world.toLowerCase()
-    
     let reverse = world.split('').reverse().join('')
-
-    return (world === reverse ? true : false)
+    return (world === reverse) ? console.log(true) : console.log(false)
 }
 
-console.log('rooms'); //true
+palindrome('salas'); //true
 
 //8)Write a function that removes a certain pattern of characters from a given text, eg. myFunction("xyz1, xyz2, xyz3, xyz4 and xyz5", "xyz") will return "1, 2, 3, 4 and 5.
 
