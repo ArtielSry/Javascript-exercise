@@ -309,3 +309,55 @@ function square(n){
  return Array(n).fill('+'.repeat(n)).join('\n');
 }
 console.log(square(4));
+
+// 29) Array methods:
+//returns the array multiplied by 2
+const num1 = [1,2,3,4]
+console.log(num.map(n => n*2)) //[2,4,6,8]
+
+//returns the array filtering the string
+const num2 = [1,'hola', 'si']
+console.log(num.filter(n => typeof n == "string" ))// ['hola','si']
+
+//returns the index of a value in the array
+const num3 = [1,'hola', 'si']
+console.log(num.findIndex(n => n === 'si' )) // 2
+
+//fill the array with true
+const num4 = [ , , ]
+console.log(num4.fill('true')) // [true, true, true]
+
+//in this array, is everything true?
+const num5 = [true, true, false, true]; 
+console.log(num5.every(n => n === true)); //false
+
+//in this array, is there some error?
+const num6 = [true, true, false, true]; 
+console.log(num5.some(n => n === false)); //true 
+
+
+/* 30) Players take turns to count incrementally, 
+replacing any number divisible by three with the word 
+"fizz", and any number divisible by five with the word
+"buzz", and any number divisible by
+both 3 and 5 with the word "fizzbuzz".*/
+
+function fizzbuzz(max){
+  for(let i = 1; i <= max; i++ ){
+    
+    if(i % 3 == 0){ console.log('fizz')} 
+    
+    else if (i % 5 == 0){ console.log('buzz')}
+    
+    else if (i % 3 == 0 && i % 5 == 0){console.log('fizzbuzz')}
+
+    else console.log(i)
+  }
+}
+
+fizzbuzz(100) 
+
+// 31) Find out if there is any number in the array and in what position it is.
+const arr = ['a','b', 10,'c','c'];
+console.log(arr.some(n => typeof n === 'number'))
+console.log(arr.findIndex(n => typeof n === 'number'))
