@@ -301,3 +301,12 @@ console.log(avg)
  }
 
  smallestMissingPositive(nums)
+
+
+// 28) Generate a square using this simbol '+'.
+
+function square(n){
+    const newSquare = Array(n);
+    newSquare.fill('+'.repeat(n)).join(\n);
+
+console.log(square);
