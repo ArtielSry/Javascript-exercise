@@ -394,19 +394,4 @@ arr.splice(1,1) // in position 1 = Zombieland, 2012
 //toSpliced sirve para lo mismo pero creando un nuevo array en vez de modificando el existente
 console.log(arr) //   {pelicula: 'La vida es Bella', year: 1997}, {pelicula: 'Volver', year: 1965}
 
-// 34) SetInterval - setTimeout. Hora en tiempo real:
-
-let hour= setInterval(() => {
-  console.log(new Date().toLocaleTimeString());
-}, 1000)
-
-//stop setInterval:
-clearTimeout(hour)
-//Just one time:
-setTimeout(() => {
-  console.log('Happens just one time');
-}, 1000)
-
-
-
 
