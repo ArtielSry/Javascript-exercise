@@ -37,7 +37,7 @@ console.log(sumNumbers(...numbers)); // 6
 const arr1 = [1,2,3,4,5];
 const arr2 = [6,7,8,9,10];
 
-const arr3 = [...arr1,...arr2] ; 
+const arr3 = [...arr1,...arr2] ;  //operador Spread ...
 
 console.log(arr3) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -71,7 +71,6 @@ snoopy.hello() // I am Snoopy
 
 
 // 3) Fibonacci 
-
 function fibonacci(num){
 const fib = [ 0, 1 ]
 
@@ -82,3 +81,18 @@ const fib = [ 0, 1 ]
 }
 
 fibonacci(10)
+
+// 4) Without knowing the values of an array, add them together and return the total.
+// Usamos el parametro REST
+function sum(...theArgs) { 
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return console.log(total) // 15 total
+  // return total / theArgs.length; / average
+}
+
+console.log(sum(1, 2, 3, 4, 5));// 3 because total:15/3:average
+
+// prototypical heritage - Herencia prototipica
