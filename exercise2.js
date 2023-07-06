@@ -44,17 +44,16 @@ let home = {
     price: 200000,
     owner: 'me'
   }
-  
-  let {location} = home;
-  console.log(`location: ${location}`);
+
+let {location} = home;
+console.log(`location: ${location}`);
 
 
 // Spread operator (...) Make a copy of array or object
 function sumNumbers(x, y, z) {
     return x + y + z;
-  }
+}
 const numbers = [1, 2, 3];
-  
 console.log(sumNumbers(...numbers)); // 6
 
 
@@ -63,7 +62,6 @@ const arr1 = [1,2,3,4,5];
 const arr2 = [6,7,8,9,10];
 
 const arr3 = [...arr1,...arr2] ;  //operador Spread ...
-
 console.log(arr3) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
@@ -87,24 +85,21 @@ function Animal (name, type){
 
 //métodos fuera de la clase o funcion constructora
 Animal.prototype.hello = function(){
-     console.log(`I am ${this.name}`);
-}
+     console.log(`I am ${this.name}`);}
   
 const snoopy = new Animal('Snoopy','Macho');
-         
 snoopy.hello() // I am Snoopy
 
 
 // 3) Fibonacci 
 function fibonacci(num){
-const fib = [ 0, 1 ]
-
+  const fib = [ 0, 1 ]
+  
   for(let i = 2; 2 <= num; i++) {
-  fib[i] = fib[i - 1] + fib[i - 2]
+      fib[i] = fib[i - 1] + fib[i - 2]
+  }
+  return console.log(fib[num]);
 }
-   return console.log(fib[num]);
-}
-
 fibonacci(10)
 
 
