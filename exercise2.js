@@ -116,3 +116,23 @@ function sum(...theArgs) {
 
 console.log(sum(1, 2, 3, 4, 5));// 3 because total:15/3:average
 
+
+// Operador de Cortocircuito: muestra el primer valor que no es falso
+let a
+let b = null;
+let c = undefined;
+let d = 4;
+let e = 'five';
+
+let f = a || b || c || d || e;
+
+console.log(f); // 4
+
+
+// ---
+
+
+
+
+
+
