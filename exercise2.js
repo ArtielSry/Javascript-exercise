@@ -21,7 +21,7 @@ console.log(date.(getFullYear()); //Año
 console.log(date.(getHours()); //Hora 
 console.log(date.(getMinutes()); //Minuto
 console.log(date.(getSeconds()); //Segundos
-
+console.log(date.toDateString()); // Dia, mes, numero del mes y año en String
 
 // Array desestructuring: coger cada valor de un array:
 const elements1 = [5, 2];
