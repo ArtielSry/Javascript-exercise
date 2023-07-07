@@ -183,7 +183,7 @@ const apiFetch = async(page) => {
 
 
 
-// This 
+// This -> hace referencia a un valor de una propiedad dentro de un objeto. Hay que tener en cuenta el scope.
 
 
 
