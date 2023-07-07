@@ -156,11 +156,11 @@ console.log('End')
 */
 
 
-// CALLBACK: funcion que se ejecuta despues de que otra lo haga.
+// CALLBACK: funcion que se ejecuta despues de que otra lo haga. Callback HELL.
 /*Supongamos que nos encontramos hablando por teléfono. Al estar hablando nos surge una situación por resolver de manera inmediata.
 Ponemos la llamada en espera, realizamos lo que tenemos que hacer y cuando terminamos, volvemos a la llamada que dejamos en espera.*/
 
-// PROMISES: .then -> reject() or resolve() // .catch()
+// PROMISES: .then -> reject() or resolve() // .catch() -> para reemplazar callback.
 function getUser(userId) {
   if(typeof userId !== 'string') return Promise.reject();
  const userData = fetch(`https://api.com/api/user/${userId}`)
@@ -171,9 +171,15 @@ function getUser(userId) {
 }
 
 
-//
+// Async: funcion asincrona 
+// Await: vas a esperar al resultado de una funcion antes de pasar a la siguiente linea de codigo
 
-
+const apiFetch = async(page) => {
+    let url="https://rickandmortyapi.com/api/character/?page="+page; // url + page
+    const api = await fetch(url);  // se usa await porque vamos a esperar a recibir la pagina antes de pintar los datos
+    const data = await api.json();  // 
+    console.log(data) // result in console
+}
 
 
 
