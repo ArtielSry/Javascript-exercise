@@ -129,10 +129,35 @@ let f = a || b || c || d || e;
 console.log(f); // 4
 
 
-// ---
+// Asynchrony
+console.log('Asynchrony')
+console.log('Start')
 
+function two(){
+  console.log('Inside two')
+  three();
+}
 
+function three(){
+  console.log('Three')
+}
 
+function one(){
+  console.log('Inside one')
+  two();
+}
+
+one();
+console.log('End')
+
+/*
+      "Asynchrony"
+      "Start"
+      "Inside one"
+      "Inside two"
+      "Three"
+      "End"
+*/
 
 
 
