@@ -187,7 +187,7 @@ const apiFetch = async(page) => {
 
 
 
-//
+//JSON -> formato ligero de intercambio de datos.
 
 
 
