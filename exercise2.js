@@ -129,24 +129,20 @@ let f = a || b || c || d || e;
 console.log(f); // 4
 
 
-// Asynchrony
+// Asynchrony: que no se resuelve en el presente inmediato sino en un futuro
 console.log('Asynchrony')
 console.log('Start')
-
 function two(){
   console.log('Inside two')
   three();
 }
-
 function three(){
   console.log('Three')
 }
-
 function one(){
   console.log('Inside one')
   two();
 }
-
 one();
 console.log('End')
 
@@ -158,6 +154,38 @@ console.log('End')
       "Three"
       "End"
 */
+
+
+// CALLBACK: funcion que se ejecuta despues de que otra lo haga.
+/*Supongamos que nos encontramos hablando por teléfono. Al estar hablando nos surge una situación por resolver de manera inmediata.
+Ponemos la llamada en espera, realizamos lo que tenemos que hacer y cuando terminamos, volvemos a la llamada que dejamos en espera.*/
+
+// PROMISES: .then -> reject() or resolve() // .catch()
+function getUser(userId) {
+  if(typeof userId !== 'string') return Promise.reject();
+ const userData = fetch(`https://api.com/api/user/${userId}`)
+   .then(response => response.json())
+   .then(data => console.log(data.name))
+   .catch(error => console.log(error))
+   .finally(() => /*{ aviso de fim de carregamento }*/)
+}
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
