@@ -1,3 +1,9 @@
+// 0) Add the month missed
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+
+console.log(months); // ["Jan", "Feb", "March", "April", "June"]
+
 
 //1) Write a function that counts the number of characters in a string, eg. myFunction("Hello World") will return 10.
 function myFunction(text){
