@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JavaScript Forms</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <style>
+    .form {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form input {
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid rgb(204, 204, 204);
+        outline: none;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: rgb(8, 41, 255);
+        border: none;
+        color: white;
+        padding: 7px;
+        width: 100px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .error {
+        border: 1px solid red !important;
+    }
+    </style>
+
+    <h1>Form</h1>
+    <form class="form" id="form">
+        <input id="name" type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    const form = document.getElementById('form');
+    const nameForm = document.getElementById('name')
+
+    const sendForm = (event) => {
+        event.preventDefault();
+
+        /* 
+            console.log(event.target.name.value, 
+                    event.target.password.value,
+                    event.target.email.value)
+        */
+
+        const {name, email, password} = event.target;
+        console.log(
+            name.value,
+            email.value,
+            password.value
+        )
+
+        if(name.value.length === 0){
+            alert('Please fill the form')
+            nameForm.classList.add('error')
+        }
+
+    } 
+    form.addEventListener('submit', sendForm)
+
+   
+
+
+    </script>
+</body>
+</html>
