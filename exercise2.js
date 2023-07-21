@@ -173,29 +173,48 @@ function getUser(userId) {
 
 // Async: funcion asincrona 
 // Await: vas a esperar al resultado de una funcion antes de pasar a la siguiente linea de codigo
-
 const apiFetch = async(page) => {
     let url="https://rickandmortyapi.com/api/character/?page="+page; // url + page
     const api = await fetch(url);  // se usa await porque vamos a esperar a recibir la pagina antes de pintar los datos
-    const data = await api.json();  // 
+  const data = await api.json();  // 
     console.log(data) // result in console
 }
 
 
+// Formas de crear elementos o nodos en javascript:
+const newDiv = document.createElement('div');
+const newTitle = document.createTextNode('New title');
+const comment = document.createComment('This is a comment');
 
-// This -> hace referencia a un valor de una propiedad dentro de un objeto. Hay que tener en cuenta el scope.
+//Copiar un elemento o nodo existente en el HTML:
+/* 
+<!-- beforebegin -->
+<section id='section'>
+    <!-- afterbegin -->
+    <article>
+      <h3>title</h3>
+      <p>lorem ipsum dolor sit amet...</p>
+    </article>
+    <!-- beforeend -->
+    -- AQUI VA EL NUEVO ELEMENTO --
+</section>
+<!-- afterend -->
+*/
+const article = document.querySelector('article'); //cogiendo un elemento del DOM
 
+const article2 = article.cloneNode(false) //con false: hace copia en memoria del elemento (solo esta en memoria porque todavia no lo he insertado)
+const article3 = article.cloneNode(true) //con true: hace copia en memoria EN PROFUNDIDAD del elemento, asi que copia tambien los elementos hijos.
 
+//Añadiendo el nodo copiado a mi HTML:
+const section = document.getElementById('section'); //el padre, donde quiero añadirlo
+section.appendChild(article3); //appendChild para añadir como hijo a un nodo-elemento padre;
 
-//JSON -> formato ligero de intercambio de datos.
+//Puedo insertarlo en varias formas: al principio, al final, en el segundo puesto...
+section.insertAdjacentElement('beforebegin', article2) //posicion,elemento
+section.insertAdjacentElement('beforeend', article2) //posicion,elemento
+section.insertAdjacentElement('afterbegin', article2) //posicion,elemento
+section.insertAdjacentElement('afterend', article2) //posicion,elemento
 
-
-
-
-
-
-
-
-
+//
 
 
