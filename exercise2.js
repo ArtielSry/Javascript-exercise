@@ -215,6 +215,23 @@ section.insertAdjacentElement('beforeend', article2) //posicion,elemento
 section.insertAdjacentElement('afterbegin', article2) //posicion,elemento
 section.insertAdjacentElement('afterend', article2) //posicion,elemento
 
-//
+
+//Metodos para añadir clases, eliminarlas y modificarlas:
+const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const cube = document.getElementById('cube');
+//poner y quitar una clase con un click
+btn.addEventListener('click', ()=> 
+  cube.classList.toggle('blue')
+)
+//solo añade la clase
+btn2.addEventListener('click', ()=> 
+   cube.classList.add('adding')
+)
+//solo elimina la clase
+btn3.addEventListener('click', ()=> 
+   cube.classList.remove('adding')
+)
 
 
