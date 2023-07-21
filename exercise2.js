@@ -235,3 +235,7 @@ btn3.addEventListener('click', ()=>
 )
 
 
+//DOM loaded
+document.addEventListener('DOMContentLoaded', ()=> {
+  console.log('Loaded')
+})
