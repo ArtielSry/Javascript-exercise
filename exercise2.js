@@ -239,3 +239,23 @@ btn3.addEventListener('click', ()=>
 document.addEventListener('DOMContentLoaded', ()=> {
   console.log('Loaded')
 })
+
+
+/* BUBBLING: cuando un elemento hijo tiene un evento y su elemento padre tambien 
+tiene un evento, al hacer click en el evento hijo tambien va a ocurrir el evento de su padre,
+esto se conoce como bubbling.
+Para evitarlo: */
+const section= document.getElementById('section') // parent
+const title = document.getElementById('title') // child
+
+section.addEventListener('click', (event)=> {
+  console.log('Esto es la section')
+})
+
+title.addEventListener('click', ()=> {
+  event.stopPropagation(); // con este evento evito que el section padre haga su evento.
+  console.log('Esto es el titulo')
+})
+
+
+//
