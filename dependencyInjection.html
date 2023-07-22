@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Example forEach()</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border:1px solid gray;
+            margin: 10px;
+            border-radius: 7px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div img {
+            width: 100px;
+            margin: 10px;
+        }
+
+    </style>
+    <h1>Technologies</h1>
+
+    <script>
+
+        
+        const TECHNOLOGIES = [
+                    {
+                        url: 'reactjs.org',
+                        name: 'React JS'
+                    },
+                    {
+                        url: 'nodejs.org',
+                        name: 'node JS'
+                    },
+                    {
+                        url: 'graphql.org',
+                        name: 'GraphQL'
+                    }
+                ]
+
+      /*   
+        //Primera forma de insertarlo en el HTML: es mas visual
+
+        const tech = (params) => `
+        <div class='tech'>
+            <img src='https://logo.clearbit.com/${params.url}'/>
+            <span>${params.name}</span>
+        </div>
+        `
+
+        TECHNOLOGIES.forEach(techParams => document.body.innerHTML += tech(techParams))
+
+      */
+
+
+        //Usando la api del DOM de javascript: es mas estricta pero no es legible.
+        const techDOM = (params) => {
+            const div = document.createElement('div');
+            div.className = 'tech';
+            const img = document.createElement('img');
+            img.src = `https://logo.clearbit.com/${params.url}`;
+            const span = document.createElement('span');
+            const text = document.createTextNode(params.name);
+
+            div.appendChild(img);
+            div.appendChild(span);
+            span.appendChild(text);
+
+            return div;
+        }
+
+        TECHNOLOGIES.forEach((techParams) => document.body.appendChild(techDOM(techParams)))
+
+
+      
+    </script>
+</body>
+</html>
