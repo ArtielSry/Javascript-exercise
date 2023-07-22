@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Clases with Extends and Super</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Herencia de clases</h1>
+    <script>
+        // PADRE
+        class Usuario {
+            constructor(name, email, password){
+                this.name = name;
+                this.email = email;
+                this.password = password;
+            }
+
+            saludo(){
+                console.log(`Bienvenido ${name}`)
+            }
+
+            login(email,password){
+                return this.email === email && this.password === password;
+            }
+        }
+
+        // HIJO
+        class Alumno extends Usuario { //con el extends hereda todo de la clase Usuario
+            constructor(nombre,email,password){
+                super(name,email,password); //lo que hereda de Usuario
+
+                this.activo = false;
+            }
+
+            activar(){
+                this.activo = true;
+            }
+
+            login(email,password){
+                if (!this.activo) return false
+                return super.login(email,password)
+            }
+        }
+
+        const pablo = new Usuario('pablo','pablo@gmail.com','pablo123')
+        const jose = new Alumno('jose','jose@gmail.com','jose123')
+
+        console.log(pablo instanceof Usuario) // true
+        console.log(jose instanceof Usuario) // true
+
+    </script>
+</body>
+</html>
